@@ -381,7 +381,7 @@ WEEK=(\
     [7]="vasarnap") \
 )
 
-for i in {1..7};
+for i in {1 7};
 do
     echo -n "${WEEK[$i]}:"
     whatontoday ${WEEK[${i}]}
