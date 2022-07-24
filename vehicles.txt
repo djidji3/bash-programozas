@@ -1,0 +1,8 @@
+Rendszám:Műszaki lejár:Szükséges figyelmeztetés:Gyártmány:Egyéb
+ABC-123:2022-08-22:igen:Lada:Nincs
+ABD-123:2022-07-30:igen:Lada:Nincs
+BBC-623:2022-04-22::Lada:Nincs
+CAC-523:2022-09-22:igen:Lada:Nincs
+ABK-423:2022-08-12:igen:Lada:Nincs
+AKG-123:2022-05-22:igen:Lada:Nincs
+GBAC-323:2022-08-22:igen:Skoda:Nincs
