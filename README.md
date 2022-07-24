@@ -1,5 +1,7 @@
 # bash-programozas
 linux bash programozas
+# egyeb hasznos dokumentacio:
+https://szit.hu/doku.php?id=oktatas:linux:shell_programozas#toemboek
 # bash script megadasa:
 #!/usr/bin/env bash
 echo a szoveg idezojelek nelkul is megadhato $PWD
