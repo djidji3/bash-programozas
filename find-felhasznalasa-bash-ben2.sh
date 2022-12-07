@@ -30,7 +30,7 @@ find $1 -type f > /tmp/$$lista
 # vegig megyek a listaban levo fajlokon es ha van talalat kiirom
 while read sor ; do
     if grep "$2" $sor > /dev/null ; then
-        echo "talalat:"
+        echo -n "talalat: "
         echo $sor
     fi 
 done < /tmp/$$lista
