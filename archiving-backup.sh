@@ -48,9 +48,24 @@ g : incrementalfile -
 
 # tar allomany letrehozas a megadott konyvtar teljes tartalmarol
 tar -cf teszt.tar /etc
+tar -create -file=teszt.tar /etc
 
 # tar allomany letrehozasa egy find segitsegevel eloszort lista alapjan ("-T -" megmondja hogy a csoben kapott adatokkal dolgozzon)
 find /teszt -name '047' | tar czf vmi.tar.gz -T -
+
+# masolas egy tavoli geprol  ("-" megmondja kimenetere/bemenetre tegye az allomanyt)
+# a teszt mappa tartalmabol letrehoz egy tar allomany,amit a normal kimenetere kuld, amit a tar a normal bemeneten megkap es kicsomagol
+# vagyis elkesziti ua.-t a mappaszerkezetet, azon a mappan belul, ahol vagyok
+ ssh usrnev@tavoligepnev 'tar cf - teszt' | tar xf -
+
+# masolas egy tavoli geprol GZIP tomoritessel  ("-" megmondja kimenetere/bemenetre tegye az allomanyt)
+# a teszt mappa tartalmabol letrehoz egy tar allomany,amit a normal kimenetere kuld, amit a tar a normal bemeneten megkap es kicsomagol
+ ssh usrnev@tavoligepnev 'tar czf - teszt' | tar xzf -
+
+# Incrementalis masolas (g) egy tavoli geprol GZIP tomoritessel (z), verbose modban (v) ("-" megmondja kimenetere/bemenetre tegye az allomanyt)
+# a teszt mappa tartalmabol letrehoz egy tar allomany,amit a normal kimenetere kuld, amit a tar a normal bemeneten megkap es kicsomagol
+# Figyelem: ha a tavoli gepen torlesre kerult egy allomany, attol meg a helyi allomany megmarad!
+ ssh nemcsics@localhost 'tar cgvzf --level=0 - teszt' | tar xzf  -
 
 # listazz egy meglevo arhivum tartalmat
 tar -tvf teszt.tar
