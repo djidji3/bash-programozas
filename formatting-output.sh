@@ -1,0 +1,15 @@
+# szovegkimenet formazasa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
