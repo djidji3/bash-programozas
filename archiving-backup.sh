@@ -153,19 +153,8 @@ rsync rsync://tavoliGepnev
 # --password-file=FIlE jelszo fajl megadasa
 # 
 # daemon-kenti futtatas eseten tovabbi opciok adhatoak meg
-#--daemon rsync inditasa daemon-kent
+# rsync --daemon 
 # --config
-# 
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
 
 
 
