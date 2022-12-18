@@ -6,6 +6,7 @@ echo "1.parameter:$1"
 echo "2. parameter:$2"
 echo "utolso parameter:${!#}"
 echo "osszes parameter kiiratasa:$@"
+echo "az utolso parancs visszateresi erteke,amely ha 0,akkor nem volt hiba: $?"
 
 echo "a DATE valtozot megadhatod az elso paramerkent, ha nem adod meg akkor itt beallitom"
 
@@ -25,6 +26,25 @@ else
     echo "$2 es $1 egyenlo"
 
 fi
+
+######################################################
+# [[]] kapcsos zarajel hasznalata megegyezik a [] hasznalataval, de annyival tobb hogy tesztelheto vele regularis kifejezes
+# pelda
+INT=-5
+if [[ "$INT" =~ ^-?[0-9]+$ ]]; then
+....
+fi
+# az == operatornal is hasznalhato a regexp kifejezes
+# pelda
+FILE=foo.bar
+if [[ $FILE == foo.* ]]; then
+...
+fi
+#######################################################
+
+# aritmetikai muveletekhez hasznalhatjuk a (()) tesztelest, mely akkor igaz ha nem 0 az eredmeny
+if ((1)); then echo "It is true."; fi
+if ((0)); then echo "It is true."; fi
 
 ########################################################
 # egyszerusites,mely ket elagazas eseten alkalmazhato
