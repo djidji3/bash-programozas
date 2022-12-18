@@ -13,7 +13,7 @@ echo aktuális teljes útvonallal : $PWD
 echo aktuális könyvtárnévet kapjuk meg, útvonal nélkül: `basename $PWD`
 echo
 echo sed hasznalata
-# a sed egy programozhato szovegszerkeszto, ami egy betus parancsokkal es szabalyos kifejezesekkel vezerelheto
+# a sed egy (regularis kifejezesekkel) programozhato szovegszerkeszto, ami egy betus parancsokkal es szabalyos kifejezesekkel vezerelheto
 # bemenetere erkezo szoveget kepes feldolgozni,modositani
 # a parancsokat soronkent hajtja vegre
 # ha nincs mit modositani,akkor az eredeti szoveget adja ki magabol
@@ -47,7 +47,7 @@ echo "alma alma, kerek alma" | sed 1s/alma$/korte/
 
 #------------------- sed alapveto parancsok ----------------
 # p (print)
-# a default viselkedest,ami mindent kiir letultjuk majd az 5 sor megjelenitese
+# a default viselkedest,ami mindent kiir letiltjuk majd az 5 sor megjelenitese
 cat a.txt | sed -n -5p
 
 # d (delete)
